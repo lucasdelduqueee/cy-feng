@@ -1,0 +1,10 @@
+{
+   "userSuccess": {
+        "username": "lucas.delduque@fengbrasil.com.br",
+        "password": "@Lucas7246"
+  },
+  "userFail": {
+        "username": "lucas.delduque@fengxxxxxx.com.br",
+        "password": "@Lucxxxx246"
+  }
+}
