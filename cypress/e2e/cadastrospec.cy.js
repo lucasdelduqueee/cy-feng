@@ -1,24 +1,20 @@
-import cadastroData from '../fixtures/users/cadastroData.json'
+//import cadastroData from '../fixtures/users/cadastroData.json'
+import cadastroData from '../fixtures/users/cadastroData.js'
 import CadastroPage from '../pages/CadastroPage.js'
-//import LoginPage from '../pages/loginPage.js'
+
 
 const cadastroPage = new CadastroPage()
+//const cadastroData = new cadastroData()
+
+//cadastroData.
 
 describe('template spec', () => {
 
-  /*
-const selectorsList = {
-  userName: "#mat-input-0",
-  password: "#mat-input-1",
-  loginButton: ":nth-child(5) > .feng-btn"
-}*/
 
-  it('Cadastro - passes', () => {
+  it('Cadastro - Dadas validos', () => {
     
     cadastroPage.accesscadastroPage()
     
-    
-    //cy.visit('/')
 
     cy.wait(2000);
     cy.get('[routerlink="/checkout/register"]').click()
@@ -26,18 +22,23 @@ const selectorsList = {
     cy.get('h1').should('contain.text', 'Preencha os seus dados para prosseguir com o cadastro')
 
     cadastroPage.cadastroWithUser(cadastroData.userSuccess.cpf, cadastroData.userSuccess.nome, cadastroData.userSuccess.email,
-        cadastroData.userSuccess.sexo, cadastroData.userSuccess.data, cadastroData.userSuccess.senha)
+        cadastroData.userSuccess.sexo, 
+        cadastroData.userSuccess.datanascimento, cadastroData.userSuccess.celular, cadastroData.userSuccess.senha)
 
-    /*
-    cy.get('[routerlink="/entrar"]').click()
-    cy.url().should('include', '/entrar');
-    cy.get(loginPage.selectorsList.userName).type(userData.userSuccess.username)
-    cy.get(loginPage.selectorsList.password).type(userData.userSuccess.password)
-    cy.get(loginPage.selectorsList.loginButton).click() 
-    */
+
+/*  cadastroPage.cadastroWithUser(cadastroData.userSuccess.cpf, cadastroData.userSuccess.nome, cadastroData.userSuccess.email,
+        cadastroData.userSuccess.sexo, 
+        cadastroData.userSuccess.datanascimento, cadastroData.userSuccess.celular, cadastroData.userSuccess.senha)
+
+*/
+
+
+       //cy.url().should('include', '/email'); 
+       // cy.get('h1').should('contain.text', 'Identificamos que seu e-mail ainda não foi validado.')
+
   })
 
-    it('Cadastro -  Fail', () => {
+    it('Cadastro -  Dados invalidos', () => {
 
     cadastroPage.accesscadastroPage()
     cy.wait(2000);
@@ -45,17 +46,11 @@ const selectorsList = {
     cy.get('[routerlink="/checkout/register"]').click()
     cy.url().should('include', '/register');
     cy.get('h1').should('contain.text', 'Preencha os seus dados para prosseguir com o cadastro')
-   // loginPage.loginWithUser(userData.userFail.username, userData.userFail.password)
     cadastroPage.cadastroWithUser(cadastroData.userFail.cpf)
+   /* cadastroPage.cadastroWithUser(cadastroData.userFail.cpf, cadastroData.userFail.nome, cadastroData.userFail.email,
+        cadastroData.userFail.sexo, 
+        cadastroData.userFail.datanascimento, cadastroData.userFail.celular, cadastroData.userFail.senha)
 
-    /*
-    cy.get(selectorsList.userName).type(userData.userFail.username)
-    cy.get(selectorsList.password).type(userData.userFail.password)
-    cy.get(selectorsList.loginButton).click()*/
-
-    //cy.url({ timeout: 10000 }).should('include', '/home');
-
-    //cy.contains('Olá, Lucas!').should('be.visible')
-
+*/
   })
 })

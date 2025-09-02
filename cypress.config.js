@@ -6,6 +6,6 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
 
-    baseUrl: 'https://camisa7.botafogo.com.br/',
+    baseUrl: 'https://stg.camisa7.botafogo.com.br/',
   },
 });

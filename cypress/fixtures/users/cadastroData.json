@@ -1,11 +1,13 @@
+
+
 {
    "userSuccess": {
-        "cpf": "84390698044",
+        "cpf": "862.608.810-88",
         "nome": "Lucas teste 001",
-        "email": "lucas.delduque+teste2808@fengbrasil.com.br",
+        "email": "lucas.delduque+tste566552808@fengbrasil.com.br",
         "sexo": "Masculino",
-        "datanascimento": "26/04/1998",
-        "celular": "(19) 989743306",
+        "datanascimento": "12/03/1991",
+        "celular": "19989743306",
         "senha": "@Lucas7246"
   },
   "userFail": {
@@ -18,3 +20,4 @@
         "senha": "7246"
   }
 }
+
