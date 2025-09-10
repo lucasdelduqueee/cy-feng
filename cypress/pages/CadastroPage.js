@@ -13,9 +13,6 @@ class CadastroPage {
          PrivacidadeClick: "#mat-checkbox-3 > .mat-checkbox-layout > .mat-checkbox-label > .fengi-checkmark-bold",
          SubmitClick: ".ng-star-inserted > .feng-btn"
 
-         //cy.get('.ng-star-inserted > .feng-btn')
-
-      
         }
 
         return selectorsList
@@ -28,11 +25,8 @@ class CadastroPage {
         cy.get(this.selectorsList().CpfField).type(cpf)
         cy.get(this.selectorsList().NomeField).type(nome)
         cy.get(this.selectorsList().EmailField).type(email)
-        //cy.wait(5000);
         cy.get(this.selectorsList().SexoFieldClick).click()
-        
         cy.get(this.selectorsList().SexoOption).contains(sexo).click()
-        
         cy.get(this.selectorsList().DataNascimentoField).type(datanascimento)
         cy.get(this.selectorsList().CelularField).type(celular)
         cy.get(this.selectorsList().SenhaField).type(senha)

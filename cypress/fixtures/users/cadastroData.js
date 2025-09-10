@@ -28,30 +28,11 @@ const cadastroSuccess = {
         sexo: "Masculino",
         datanascimento: "12/03/1991",
         celular: "19989743306",
-      //  senha: "@Lucas7246"
-
-         //cy.get('.ng-star-inserted > .feng-btn')
+        //senha: "@Lucas7246"
 
     }
     
   };
-
-  //return cadastroSuccess;
 
 export default cadastroSuccess
 
-/*
-
-/////
-const cadastroFalha = {
-    userFalha: {
-        cpf: "@Lucas7246"
-
-         //cy.get('.ng-star-inserted > .feng-btn')
-
-    }
-    
-  };
-
-  export { cadastroSuccess, cadastroFalha };
-  */
